@@ -1,3 +1,16 @@
-In-place Algorithms:
+Swap (n-1) times for each step, total d steps. Time complexity O(n^2), space O(1) in place
 
-Swap $(n-1)$ times for each step, total $d$ steps
+vector<int> rotLeft(vector<int> a, int d) {
+    while(d!=0){
+        int n = a.size();
+        for(int j=0;j<n-1;j++){
+            swap(a[j],a[1+j]);
+        }
+        d--;
+    }
+    return a;
+}
+
+Time out dealing with large data.
+
+---------------------------------------------------------------------------------------------
