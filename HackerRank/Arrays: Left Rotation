@@ -1,4 +1,4 @@
-Swap (n-1) times for each step, total d steps. Time complexity O(n^2), space O(1) in place
+Swap (n-1) times for each step, total d steps. Time complexity O(n*d) / O(n^2) worst case, space O(1) in place
 
 vector<int> rotLeft(vector<int> a, int d) {
     while(d!=0){
@@ -14,3 +14,28 @@ vector<int> rotLeft(vector<int> a, int d) {
 Time out dealing with large data.
 
 ---------------------------------------------------------------------------------------------
+vector<int> a;
+
+a = [1,2,3,4,5]
+
+1. Revert all vector: [5,4,3,2,1]
+2. Suppose d = 2, revert [5,4,3,...] and [...,2,1]
+3. Result [3,4,5,1,2]
+
+!!!!!!reverse(v.begin() + 5, v.begin() + 8);   from index 5 to index 7!!!!!
+
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the rotLeft function below.
+vector<int> rotLeft(vector<int> a, int d) {
+    int n = a.size();
+    reverse(a.begin(), a.end());
+    reverse(a.begin(), a.begin()+(n-d));
+    reverse(a.begin()+(n-d), a.end());
+    return a;
+}
