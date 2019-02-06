@@ -1,0 +1,3 @@
+In-place Algorithms:
+
+Swap $(n-1)$ times for each step, total $d$ steps
