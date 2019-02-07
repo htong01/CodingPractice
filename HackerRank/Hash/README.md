@@ -37,3 +37,7 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
 
 }
 ```
+
+
+# Two Strings
+
