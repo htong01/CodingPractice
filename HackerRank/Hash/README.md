@@ -1,7 +1,7 @@
 # Hash Tables: Ransom Note
 
 最直接最笨方法：
-  在note中的单词是否和magazine中任一单词重复，都不重复的话返回false（有几个test case没有通过，不知道为什么）
+  在note中的单词是否和magazine中任一单词重复，都不重复的话返回false（有几个test case没有通过，不知道为什么，而且懒得去想了）
 ```
 void checkMagazine(vector<string> magazine, vector<string> note) {
 
@@ -23,6 +23,9 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
 ```
 -------------------------------------------------------------------------------------------------------
 聪明的方法：HashMap
+
+unordered_map is an associated container that stores elements formed by combination of key value and a mapped value.
+[unordered_map instruction](https://www.geeksforgeeks.org/unordered_map-in-cpp-stl/)
 ```
 void checkMagazine(vector<string> magazine, vector<string> note) {
 
