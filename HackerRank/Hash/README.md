@@ -1,3 +1,5 @@
+# Hash Tables: Ransom Note
+
 最直接最笨方法：
   在note中的单词是否和magazine中任一单词重复，都不重复的话返回false（有几个test case没有通过，不知道为什么）
 ```
