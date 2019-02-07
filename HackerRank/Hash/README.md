@@ -44,3 +44,21 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
 
 # Two Strings
 
+```
+string twoStrings(string s1, string s2) {
+    string Y = "YES";
+    string N = "NO";
+    string letters = "abcdefghijklmnopqrstuvwxyz";
+    string flag = N;
+    
+    for(int i=0;i<letters.size();i++){
+        if(s1.find(letters[i])!=string::npos && s2.find(letters[i])!=string::npos){
+            flag = Y;
+            break;
+        }
+    }
+    return flag;
+}
+```
+s1.find(letters[i])!=string::npos
+Find letter ith if is in string s1, npos means not exist -1. If in s1 and s2 both find the same letter, than answer is YES
