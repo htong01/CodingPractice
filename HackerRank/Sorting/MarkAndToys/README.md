@@ -1,4 +1,5 @@
 **Bubble sort + cnt from the smallest = timeout**
+Actually if using **std::sort(arr,arr+n) / sort( arr.begin(),arr.end() )** for sorting, it's totally fine
 
 ```
 int maximumToys(vector<int> prices, int k) {
@@ -23,3 +24,4 @@ int maximumToys(vector<int> prices, int k) {
 
 }
 ```
+
