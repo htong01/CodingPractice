@@ -1,0 +1,45 @@
+By using hashmap.
+
+Follow up of this promblem is worth thinking about.
+
+1. 
+O(m+n)
+
+
+class Solution {
+public:
+    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        unordered_map<int,int> dict;
+        vector<int> result;
+        for(int i=0;i<nums1.size();i++) dict[nums1[i]]++;
+        for(int j=0;j<nums2.size();j++){
+            if(--dict[nums2[j]]>=0) result.push_back(nums2[j]);
+        }
+        return result;
+    }
+};
+--------------------------------------------------------------------------------------------------------
+
+1. What if the given array is already sorted?
+
+vector<int> intersect(vector<int>& a, vector<int>& b) {
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+    a.erase(set_intersection(a.begin(), a.end(), b.begin(), b.end(), a.begin()), a.end());
+    return a;
+}
+
+--------------------------------------------------------------------------------------------------------
+
+2. What if nums1's size is small compared to nums2's size? Which algorithm is better?
+
+if(dict.find(nums2[i]) != dict.end() && --dict[nums2[i]] >= 0) res.push_back(nums2[i]);
+// search first, if the number in nums1 also exist in nums2.
+
+Space complexity can be reduced to O(m)
+
+--------------------------------------------------------------------------------------------------------
+
+3. What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
+
+Sort and compare
