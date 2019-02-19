@@ -1,0 +1,17 @@
+Hash map.
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> dict; // number, index
+        for(int i=0;i<nums.size();i++){
+            int toFind = target - nums[i];
+            if(dict.find(toFind) != dict.end()) return {dict[toFind],i};
+                
+            dict[nums[i]] = i;
+            
+        }
+        return {};
+        
+    }
+};
