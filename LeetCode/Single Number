@@ -1,0 +1,5 @@
+Request: O(n) time, O(1) space(in place)
+
+By using XOR. The trick is: A^B^A=B
+
+Clever solution!!!!!!!!!
