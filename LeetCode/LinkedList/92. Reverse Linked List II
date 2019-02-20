@@ -1,0 +1,22 @@
+遇到linked list开始懵
+
+initialize的时候就开始懵了
+
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int m, int n) {
+        ListNode* temp = new ListNode(0);
+        ListNode* pre = temp;
+        pre->next = head;
+        for(int i=0;i<m-1;i++) pre = pre->next;
+        
+        ListNode *cur = pre->next;
+        for(int i=0;i<n-m;i++){
+            ListNode *move = cur->next;
+            cur->next = move->next;
+            move->next = pre->next;
+            pre->next = move;
+        }
+        return temp->next;
+    }
+};
