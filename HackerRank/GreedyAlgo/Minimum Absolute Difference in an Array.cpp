@@ -13,3 +13,6 @@ int minimumAbsoluteDifference(vector<int> arr) {
     }
     return res;
 }
+
+// Sort first, and only count the min difference between two contiguous element 
+// O(nlogn) time complexity
