@@ -40,6 +40,5 @@ Here, the logic is to calculate the difference (maxCur += prices[i] - prices[i-1
     }
 /*
 *maxCur = current maximum value
-
 *maxSoFar = maximum value found so far
 */
