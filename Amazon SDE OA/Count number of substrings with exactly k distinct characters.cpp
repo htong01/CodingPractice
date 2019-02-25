@@ -36,3 +36,12 @@ int main(){
          << countkDist(str, k) << endl; 
     return 0; 
 }
+
+
+
+/*
+Given a string and number K, find the substrings of size K with K-1 distinct characters. If no, output empty list. Remember to emit the duplicate substrings, i.e. if the substring repeated twice, only output once.
+
+字符串中等题。Sliding window algorithm + Hash。此题跟上题的区别在于，子串中有一个重复字符。
+思路还是跟上题一样，只是需要把对count的判断条件改成dupCount。当窗口size为K时，如果重复字符只有一个的话，则为结果集。对dupCount操作的判断条件，也需要改为>0, >1。
+*/
