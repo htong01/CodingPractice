@@ -45,3 +45,27 @@ Given a string and number K, find the substrings of size K with K-1 distinct cha
 字符串中等题。Sliding window algorithm + Hash。此题跟上题的区别在于，子串中有一个重复字符。
 思路还是跟上题一样，只是需要把对count的判断条件改成dupCount。当窗口size为K时，如果重复字符只有一个的话，则为结果集。对dupCount操作的判断条件，也需要改为>0, >1。
 */
+
+string countkDist(string str, int k) {
+	int n = str.length();
+	int res = 0;
+	int cnt[26];
+	string ans = "";
+	for(int i=0;i<n;i++){
+		int dist_cnt = 0;
+		int dup_cnt = 0;
+
+		memset(cnt, 0, sizeof(cnt));
+		string temp = "";
+
+		for(int j=i;j<n;j++){
+			if(cnt[str[j]-'a']==0) dist_cnt++;
+			if(cnt[str[j]-'a']==1) dup_cnt++;
+			cnt[str[j]-'a']++;
+			temp.push_back(str[j]);
+			if(dist_cnt == k-1 && dup_cnt ==1) {res++;ans = temp; }
+			if(dist_cnt>k-1) break;
+		}
+	}
+	return ans;
+}
