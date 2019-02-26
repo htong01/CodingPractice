@@ -15,3 +15,28 @@ public:
 };
 
 //---------------------------------DP Answer----------------------------------------------------
+/*
+O(N) time, O(1) space
+For every house k, there are two options: either to rob it (include this house: i) or not rob it (exclude this house: e).
+
+Include this house:
+i = num[k] + e (money of this house + money robbed excluding the previous house)
+
+Exclude this house:
+e = max(i, e) (max of money robbed including the previous house or money robbed excluding the previous house)
+(note that i and e of the previous step, that's why we use tmp here to store the previous i when calculating e, to make O(1) space)
+*/
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int total = 0;
+        int prev = 0;
+        
+        for(int i=0;i<nums.size();i++){
+            int temp = total;
+            total = prev + nums[i];
+            prev = max(prev,temp);
+        }
+        return max(prev,total);
+    }
+};
