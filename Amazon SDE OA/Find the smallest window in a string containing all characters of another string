@@ -1,0 +1,9 @@
+/*
+https://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all-characters-of-another-string/
+
+Method 1 ( Brute force solution )
+1- Generate all substrings of string1 (“this is a test string”)
+2- For each substring, check whether the substring contains all characters of string2 (“tist”)
+3- Finally, print the smallest substring containing all characters of string2.
+*/
+
