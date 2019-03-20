@@ -18,4 +18,23 @@ long candies(int n, vector<int> arr) {
     return ans;
 }
 
-// --------------------------------------------------------------------
+// ----------------All pass solution----------------------------------------------------
+// 想不明白为什么上面那种写法没过
+long candies(int n, vector<int> arr) {
+    vector<int> candies(n,0);
+    candies[0] = 1;
+    int temp;
+    
+    for(int i=1;i<n;i++){
+        if(arr[i]>arr[i-1]) candies[i] = candies[i-1]+1;
+        else candies[i] = 1;
+    }
+    long ans = candies[n-1];
+    for(int i=n-2;i>=0;i--){
+        if(arr[i]>arr[i+1]) temp = candies[i+1] + 1;
+        else temp = 1;
+        ans += max(temp,candies[i]);
+        candies[i] = temp;
+    }
+    return ans;
+}
