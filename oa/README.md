@@ -4,3 +4,5 @@
 [Two operations get to the target, return minimun edit:  ](https://www.geeksforgeeks.org/convert-number-m-n-using-minimum-number-given-operations/)   这个也好傻逼啊！7/11 test case passed，剩下的是terminate due to timeout。没自己想是corner case还是我的算法太慢了，应该不至于吧_(:з」∠)_
 
 Regular Expression([正则化表达](https://en.wikipedia.org/wiki/Regular_expression))，没想到1小时两道题结果有一题是考这么个东西，疯狂现场躲着摄像头悄悄摸搜索
+
+让你写Exception handling的，C++ try catch
