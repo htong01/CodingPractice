@@ -1,0 +1,10 @@
+不管做多少遍都绕不清楚的一道题
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = head
+        while head:
+            curr = head
+            head = head.next
+            curr.next = prev
+            prev = curr
+        return prev
