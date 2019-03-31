@@ -1,4 +1,5 @@
 不管做多少遍都绕不清楚的一道题
+https://www.youtube.com/watch?v=sYcOK51hl-A 讲的还挺清楚
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         prev = head
