@@ -16,3 +16,6 @@ public:
         return min_heap.size();
     }
 };
+
+还有个挺方便的想法：
+
