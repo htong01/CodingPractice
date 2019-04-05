@@ -6,3 +6,6 @@
 Regular Expression([正则化表达](https://en.wikipedia.org/wiki/Regular_expression))，没想到1小时两道题结果有一题是考这么个东西，疯狂现场躲着摄像头悄悄摸搜索
 
 让你写Exception handling的，C++ try catch
+
+
+现场在线写一个string class？？？？？？包括constructor，operator overload，index，compare…… 有想法！不按套路出牌！
