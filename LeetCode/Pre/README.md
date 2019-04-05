@@ -27,3 +27,5 @@ int findSubstring(string s){
         return d;
   }
 ```
+
+Sliding Window Max/Min: [monotonic queue ] (https://leetcode.com/problems/sliding-window-maximum/discuss/65885/This-is-a-typical-monotonic-queue-problem)
