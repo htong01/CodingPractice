@@ -1,0 +1,18 @@
+1. Socket
+	Data sent over a network interface, either to a different process on the same computer or to another computer on the network. Stream-oriented or more rarely message-oriented.
+2. File
+	A record stored on disk, or a record synthesized on demand by a file server, which can be accessed by multiple processes.
+3. Signal/ Asynchronous System Trap
+	A system message sent from one process to another, not usually used to transfer data but instead used to remotely command the partnered process.
+4. Message queue
+	A data stream similar to a socket, but which usually preserves message boundaries. Typically implemented by the operating system, they allow multiple processes to read and write to the message queue without being directly connected to each other.
+5. Pipe
+	A unidirectional data channel. Data written to the write end of the pipe is buffered by the operating system until it is read from the read end of the pipe. Two-way data streams between processes can be achieved by creating two pipes utilizing standard input and output.
+6. Named Pipe
+	A pipe implemented through a file on the file system instead of standard input and output. Multiple processes can read and write to the file as a buffer for IPC data.
+7. Shared memory
+	Multiple processes are given access to the same block of memory which creates a shared buffer for the processes to communicate with each other.
+8. Memory-mapped file
+	A file mapped to RAM and can be modified by changing memory addresses directly instead of outputting to a stream. This shares the same benefits as a standard file.
+
+1~4 can be used in ost operating systems, 5~8 is used in all POSIX systems and Windows
