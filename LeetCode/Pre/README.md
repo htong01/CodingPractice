@@ -29,3 +29,21 @@ int findSubstring(string s){
 ```
 
 Sliding Window Max/Min: [monotonic queue ](https://leetcode.com/problems/sliding-window-maximum/discuss/65885/This-is-a-typical-monotonic-queue-problem)
+
+```
+struct compare{
+bool operator() (ListNode *l, ListNode *r){
+    return l->val > r->val;
+}
+};
+
+priority_queue<ListNode*, vector<ListNode*>,compare> q;
+```
+
+```
+ static bool comp (Interval a, Interval b){
+ 		return a.start < b.start;
+ }
+ sort(intervals.begin(), intervals.end(), comp);
+    priority_queue<int, vector<int>, greater<int> > min_heap;
+ ```
