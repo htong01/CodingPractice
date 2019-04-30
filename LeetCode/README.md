@@ -4,3 +4,6 @@ C++
 
 C++ |= operator: bitwise OR.
 The '&' operator is the bitwise AND operator
+>>= 1
+
+rand() function to generate random 
