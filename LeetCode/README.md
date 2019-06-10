@@ -9,3 +9,5 @@ The '&' operator is the bitwise AND operator. ```x & 1```
 ```>>= ```right shift: ```x >>= 1``` means "set x to itself shifted by one bit to the right".
 
 rand() function to generate random 
+
+[geline function](https://www.geeksforgeeks.org/getline-string-c/)
