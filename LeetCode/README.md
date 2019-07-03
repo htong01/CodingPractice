@@ -11,3 +11,5 @@ The '&' operator is the bitwise AND operator. ```x & 1```
 rand() function to generate random 
 
 [geline function](https://www.geeksforgeeks.org/getline-string-c/)
+
+[the series of the calculator problems](https://leetcode.com/problems/basic-calculator-iii/discuss/113592/Development-of-a-generic-solution-for-the-series-of-the-calculator-problems)
